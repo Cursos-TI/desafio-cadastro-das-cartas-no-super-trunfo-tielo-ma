@@ -1,36 +1,40 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-
 int main() {
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
-    char nome_estado[20], nome_cidade[20];
-    char codigo;
+
+    //Declarando as variáveis:
+    char nome_pais[40], nome_estado[40], nome_cidade[40], codigo[5];
     int npt;
     float pop, area, pib;
-    /*OBS: AQUI ESTAREI DEIXANDO O CÓDIGO RESPECTIVO DE CADA ESTADO E CIDADE
-    ESTADOS              | CIDADES
-    A - ACRE             | A1 - Acrelândia     | A2 - Feijó          | A3 - Jordão           | A4 - Rio Branco
-    B - BAHIA            | B1 - Salvador       | B2 - Itabuna        | B3 - Feira de Santana | B4 - Vitória da Conquista
-    C - CEARÁ            | C1 - Fortaleza      | C2 - Itapipoca      | C3 - Aracati          | C4 - Sobral
-    D - DISTRITO FEDERAL | D1 - Brasília       | D2 - Ceilândia      | D3 - Sobradinho       | D4 - Gama
-    E - ESPÍRITO SANTO   | E1 - Vitória        | E2 - Linhares       | E3 - Serra            | E4 - Vila Velha
-    F - SÃO PAULO        | F1 - São Paulo      | F2 - Ribeirão Preto | F3 - Diadema          | F4 - Guarulhos
-    G - RIO DE JANEIRO   | G1 - Rio de Janeiro | G2 - Niterói        | G3 - São Gonçalo      | G4 - Belford Roxo
-    H - MINAS GERAIS     | H1 - Belo Horizonte | H2 - Betim          | H3 - Montes Claros    | H4 - Uberlândia
-    */
+    //Aqui abaixo será a entrada do usúario, onde ele irá interagir com o terminal adicionando as informações das cartas.
    printf("========== SUPER TRUNFO - PAÍSES ========= \n");
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
-    
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
+
+    printf("Digite o nome do País: \n");
+    fgets(nome_pais, 40, stdin);
+    printf("Digite o nome do estado: \n");
+    fgets(nome_estado, 40, stdin);
+    printf("Digite o nome da cidade: \n");
+    fgets(nome_cidade, 40, stdin);
+    printf("Digite o código da carta: \n");
+    scanf("%s", &codigo);
+    printf("Digite o total da população da cidade de: %s", nome_cidade);
+    scanf("%f", &pop);
+    printf("Digite o tamanho em área da cidade de: %s" "km²", nome_cidade);
+    scanf("%f", &area);
+    printf("Digite o PIB da cidade de: %s", nome_cidade);
+    scanf("%f", &pib);
+    printf("Informe qual o número de pontos turísticos da cidade de %s", nome_cidade);
+    scanf("%i", &npt);
+    //Abaixo os codigos para imprimir os dados cadastrados das cartas.
+    printf("VEJA ABAIXO OS DADOS DA SUA CARTA\n");
+    printf("País: %s ", nome_pais);
+    printf("Estado: %s ", nome_estado);
+    printf("Cidade: %s ", nome_cidade);
+    printf("Código da carta: %s \n", codigo);
+    printf("Total da População: %.4f \n", pop);
+    printf("Total em área: %.4f \n", area);
+    printf("PIB da cidade: %.4f \n", pib);
+    printf("Número de pontos turísticos: %i \n", npt);
 
     return 0;
 }
