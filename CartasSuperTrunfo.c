@@ -25,6 +25,7 @@ int main() {
     scanf("%f", &pib);
     printf("Informe qual o número de pontos turísticos da cidade de %s", nome_cidade);
     scanf("%i", &npt);
+    
     //Abaixo os codigos para imprimir os dados cadastrados das cartas.
     printf("VEJA ABAIXO OS DADOS DA SUA CARTA\n");
     printf("País: %s ", nome_pais);
